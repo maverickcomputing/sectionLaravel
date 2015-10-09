@@ -34,15 +34,15 @@ Example 3 has a few parts, but they're all within the Example3Controller.php fil
 
 All of these examples start in Routes.php on line 79.
 
-### Index page example
-Location: /example
+#### Index page example
+Location: /example3
 
 Primary Function: getIndex() in Example3Controller.php
 
 This just outputs that you're using Example3Controller.php. Nothing Fancy happening here.
 
-### Address data passing example
-Location: /example/address
+#### Address data passing example
+Location: /example3/address
 
 This example uses the following files:
 • Routes.php
@@ -51,8 +51,8 @@ This example uses the following files:
 
 See the comments for public function getAddress() for more information.
 
-### List data passing example
-Location: /example/list
+#### List data passing example
+Location: /example3/list
 
 This example uses the following files:
 • Routes.php

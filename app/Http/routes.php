@@ -74,7 +74,7 @@ Route::get('example2', 'Example2Controller@showExample2');
  * The rest of the examples will be located inside Example3Controller.php.
  *
  */
-Route::controller('example', 'Example3Controller');
+Route::controller('example3', 'Example3Controller');
 
 
 
