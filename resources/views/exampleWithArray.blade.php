@@ -16,8 +16,8 @@
           <div class="col-md-6">
             <address>
               <strong>{{ $addressData['name'] }}</strong>
-              <br /> {{ $addressData['name']}}
               <br /> {{ $addressData['street']}}
+              <br /> {{ $addressData['addressLine2']}}
               <br /> <abbr title="Phone">P:</abbr> {{ $addressData['phone'] }}
             </address>
           </div>
