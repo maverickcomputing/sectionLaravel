@@ -57,9 +57,7 @@ Route::get('/example1', function () {
  * many entries will have to be made in the Routes.php file as your
  * application grows.
  */
-Route::get('example2', [
-  'as' => 'example2', 'uses' => 'Example2Controller@showExample2'
-]);
+Route::get('example2', 'Example2Controller@showExample2');
 
 
 
