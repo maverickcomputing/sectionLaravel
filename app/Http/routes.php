@@ -32,7 +32,7 @@ Route::get('/example1', function () {
   // from inside the view, while the second parameter is the data you
   // with to pass in.
 
-  // It's usually simplier to to keep the names consistent in the view and
+  // It's usually simpler to to keep the names consistent in the view and
   // in your PHP. I used different names here to make the distinction between
   // the two parameters clearer.
   return View('example1')
