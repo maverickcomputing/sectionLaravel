@@ -17,11 +17,11 @@ class Example2Controller extends Controller
 
 
     // setup our data to pass to the view
-    $title        = "Example 1";
-    $name         = "Flying Rescue Kittens, LLC";
-    $street       = "1 Fortress of Kittens place";
-    $addressLine2 = "Waltham, MA 02453";
-    $phone        = "555-555-5555";
+    $title        = "Example 2";
+    $name         = "Super Bad Guys, LLC";
+    $street       = "1 Fortress of EVIL place";
+    $addressLine2 = "Cambridge, MA 02453";
+    $phone        = "555-555-1234";
 
     // return the view, with the above data
     return View('example1')

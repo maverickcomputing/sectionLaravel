@@ -28,7 +28,7 @@ class Example3Controller extends Controller
    */
   public function getAddress() {
     // establish our variables
-    $title        = "Example 1";
+    $title        = "Example address";
     $name         = "Flying Rescue Kittens, LLC";
     $street       = "1 Fortress of Kittens place";
     $addressLine2 = "Waltham, MA 02453";
@@ -102,7 +102,7 @@ class Example3Controller extends Controller
    */
   private function generateAddress() {
     // establish our variables
-    $title        = "Example 1";
+    $title        = "Example";
     $name         = "Flying Rescue Kittens, LLC";
     $street       = "1 Fortress of Kittens place";
     $addressLine2 = "Waltham, MA 02453";
