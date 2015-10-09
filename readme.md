@@ -1,6 +1,8 @@
 ## Laravel PHP Framework Examples
 
-This is a basic laravel install with a few routes, controllers and views. Clone this repository down and follow the steps used for setting up foobooks. This readme will point you to the various examples. Further explanation can be found in the comments in the examples. 
+This is a basic laravel install with a few routes, controllers and views. Clone this repository down and follow the steps used for setting up foobooks. This readme will point you to the various examples. Further explanation can be found in the comments in the examples.
+
+Don't forget to run composer, to copy .env.example to .env, and to run php artisan key:generate
 
 ### Example 1
 

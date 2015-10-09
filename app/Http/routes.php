@@ -77,3 +77,9 @@ Route::get('example2', [
  *
  */
 Route::controller('example', 'Example3Controller');
+
+
+
+Route::get('/', function() {
+  echo "Hello World";
+});
