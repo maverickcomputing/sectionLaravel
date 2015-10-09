@@ -1,7 +1,7 @@
 @extends('master')
 
 
-@section('title',  $title)
+{{--@section('title',  $title)--}}
 
 @section('styles')
   <link rel="stylesheet" href="/css/styles.css">
@@ -14,12 +14,11 @@
       <div class="col-md-12">
         <div class="row">
           <div class="col-md-6">
-
             <address>
-              <strong>{{ $companyName }}</strong>
-              <br /> {{ $streetAddress }}
-              <br /> {{ $stateTownAndZip }}
-              <br /> <abbr title="Phone">P:</abbr> {{ $phone }}
+              <strong>{{ $addressData['name'] }}</strong>
+              <br /> {{ $addressData['name']}}
+              <br /> {{ $addressData['street']}}
+              <br /> <abbr title="Phone">P:</abbr> {{ $addressData['phone'] }}
             </address>
           </div>
           <div class="col-md-6">

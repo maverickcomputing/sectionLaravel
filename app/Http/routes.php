@@ -12,15 +12,16 @@
 */
 
 /**
+ * Example 1
  * An example of a route with simple logic that passes
  * data to a view before presentation.
  *
- *
- *
+ * This is the most basic way to use a route and is largely discouraged
+ * as it becomes cumbersome to maintain as your app grows in size.
  */
 Route::get('/example1', function () {
 
-  //
+
   $name         = "Flying Rescue Kittens, LLC";
   $street       = "1 Fortress of Kittens place";
   $addressLine2 = "Waltham, MA 02453";
@@ -42,3 +43,37 @@ Route::get('/example1', function () {
     ->with('phone', $phone);
 
 });
+
+
+/**
+ * Example 2
+ * In this route, instead of having our logic in the route,
+ * we're invoking a function in one of our controllers.
+ *
+ * In app/Http/Controllers there is a controller named "Example2Controller.php"
+ * This route will invoke the "showExample2" function of said controller.
+ *
+ * This is preferred to having your logic in the route, but still means that
+ * many entries will have to be made in the Routes.php file as your
+ * application grows.
+ */
+Route::get('example2', [
+  'as' => 'example2', 'uses' => 'Example2Controller@showExample2'
+]);
+
+
+
+/**
+ * Example 3
+ *
+ * This will route anything at /example/ to the associated function within
+ * Example3Controller.php
+ *
+ * This is nice because instead of having an entry for every route related
+ * to a given controller, you can dynamically generate them based on your
+ * controller functions.
+ *
+ * The rest of the examples will be located inside Example3Controller.php.
+ *
+ */
+Route::controller('example', 'Example3Controller');
