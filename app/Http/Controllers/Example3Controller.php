@@ -19,7 +19,7 @@ class Example3Controller extends Controller
   public function getIndex() {
 
     // ignore this. This is just a fancy way to get all of the
-    // public methods of this class
+    // public methods of this class make links out of them.
     $className = 'App\Http\Controllers\Example3Controller';
     $reflector = new \ReflectionClass($className);
     $methodNames = array();
