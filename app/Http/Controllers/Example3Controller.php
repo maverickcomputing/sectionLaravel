@@ -9,14 +9,31 @@ use App\Http\Controllers\Controller;
 class Example3Controller extends Controller
 {
   /**
-   * by using the implict controller routing, functions in the controller
-   * can now be referenced function name in the URL.
+   *
+   * Outputs a list of routes available in this controller
+   * via reflection
    *
    * This function will be run if the user visits: /example3
    *
    */
   public function getIndex() {
-    echo "This is the function getIndex() in Example3Controller";
+
+    // ignore this. This is just a fancy way to get all of the
+    // public methods of this class
+    $className = 'App\Http\Controllers\Example3Controller';
+    $reflector = new \ReflectionClass($className);
+    $methodNames = array();
+    $lowerClassName = strtolower($className);
+    foreach ($reflector->getMethods(\ReflectionMethod::IS_PUBLIC) as $method) {
+      if (strtolower($method->class) == $lowerClassName) {
+        $methodNames[] = strtolower(str_replace('get', '', $method->name));
+      }
+    }
+
+
+
+    return View('example3Index')
+      ->with('routes', $methodNames);
   }
 
   /**
