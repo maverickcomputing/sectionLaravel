@@ -15,7 +15,6 @@ class Example2Controller extends Controller
    */
   public function showExample2() {
 
-
     // setup our data to pass to the view
     $title        = "Example 2";
     $name         = "Super Bad Guys, LLC";
