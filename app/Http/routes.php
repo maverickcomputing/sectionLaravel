@@ -76,6 +76,10 @@ Route::get('example2', 'Example2Controller@showExample2');
  */
 Route::controller('example3', 'Example3Controller');
 
+/**
+ * route for form controller.
+ */
+Route::controller('form', 'FormController');
 
 
 Route::get('/', function() {
@@ -83,11 +87,3 @@ Route::get('/', function() {
 });
 
 
-Route::get('/form', function() {
-  return View('form');
-});
-
-
-Route::post('/form/submitted', function() {
-  print_r($_POST);
-});

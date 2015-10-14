@@ -14,16 +14,22 @@
       <div class="col-md-12">
         <div class="row">
           <div class="col-md-6">
-            <form action="form/submitted" method='POST'>
+            <form action="/form/create" method='POST'>
               First name:<br>
               <input type="text" name="firstname" value="Mickey">
               <br>
               Last name:<br>
               <input type="text" name="lastname" value="Mouse">
+              {{-- DON"T FORGET CSRF TOKEN EXPLAINATION --}}
               {!! csrf_field() !!}
               <br><br>
               <input type="submit" value="Submit">
             </form>
+            @if( isset($request))
+              {{ $request['firstname'] }}
+              <br>
+              {{ $request['lastname'] }}
+              @endif
           </div>
         </div>
       </div>
