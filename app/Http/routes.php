@@ -81,3 +81,13 @@ Route::controller('example3', 'Example3Controller');
 Route::get('/', function() {
   echo "Hello World";
 });
+
+
+Route::get('/form', function() {
+  return View('form');
+});
+
+
+Route::post('/form/submitted', function() {
+  print_r($_POST);
+});
