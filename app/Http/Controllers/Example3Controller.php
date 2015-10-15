@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 
 class Example3Controller extends Controller
 {
+
   /**
    *
    * Outputs a list of routes available in this controller
@@ -134,5 +135,9 @@ class Example3Controller extends Controller
     $addressData['phone'] = $phone;
 
     return $addressData;
+  }
+
+  private function cats($request) {
+
   }
 }

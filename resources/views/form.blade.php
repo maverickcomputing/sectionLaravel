@@ -8,12 +8,6 @@
 @stop
 
 @section('content')
-
-  <div class="container-fluid" id='home-container'>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="row">
-          <div class="col-md-6">
             <form action="/form/create" method='POST'>
               First name:<br>
               <input type="text" name="firstname" value="{{ isset($request['firstname']) ? $request['firstname']: 'firstname' }}">
@@ -22,8 +16,11 @@
               <input type="text" name="lastname" value="{{ isset($request['lastname']) ? $request['lastname']: 'lastname' }}">
               <br>
               Favorite Animal:<br>
-              <input type='text' name='animal' value=''>This must be "cats"
+              <input type='text' name='animal' value='{{ isset($request['animal']) ? $request['animal'] : "favorite animal" }}'>This must contain the word "cats"
               {{-- DON"T FORGET CSRF TOKEN EXPLAINATION --}}
+              {{-- I totally forgot to explain this, but we covered it in class.
+                    if you're still unsure post in the slack section and I'd be happy
+                    to explain --}}
               {!! csrf_field() !!}
               <br><br>
               <input type="submit" value="Submit">
@@ -45,11 +42,6 @@
               </ul>
             </div>
             @endif
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
 
