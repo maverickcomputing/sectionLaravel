@@ -112,6 +112,9 @@ class Example3Controller extends Controller
    * our address information without outputting a view. We can take the
    * return value of this function and pass it to a view as we please.
    *
+   * To use a private function, you use this private function:
+   * self::generateAddress();
+   *
    * @return array the address data
    */
   private function generateAddress() {
@@ -137,7 +140,4 @@ class Example3Controller extends Controller
     return $addressData;
   }
 
-  private function cats($request) {
-
-  }
 }

@@ -73,22 +73,27 @@ Route::get('example2', 'Example2Controller@showExample2');
  *
  * The rest of the examples will be located inside Example3Controller.php.
  *
+ * Please note that this very often the best way to setup your routes.
  */
 Route::controller('example3', 'Example3Controller');
 
 /**
- * route for form controller.
+ * route for form controller. basically the same thing as the above.
  */
 Route::controller('form', 'FormController');
 
 
 Route::get('/', function() {
-  echo "Hello World";
+  echo "Hello World. If you're reading this, then you've set things up correctly.";
 });
 
 
+/**
+ * a quick route to test new code.
+ *
+ * I usually use this route as a scratch pad and quick testing ground when
+ * I'm testing out a new idea, or trying to isolate a problem in my code.
+ */
 Route::get('/workspace', function() {
 
-
 });
-
